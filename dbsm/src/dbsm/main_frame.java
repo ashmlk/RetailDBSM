@@ -40,24 +40,36 @@ public class main_frame {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setResizable(false);
+		frame.setBounds(100, 100, 141, 220);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		Button buttonCustomer = new Button("Customers");
 		buttonCustomer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				 new itemFrame().setVisible(true);
 			}
 		});
-		buttonCustomer.setBounds(10, 100, 104, 47);
+		buttonCustomer.setBounds(10, 10, 104, 47);
 		frame.getContentPane().add(buttonCustomer);
 		
 		Button buttonItems = new Button("Items");
-		buttonItems.setBounds(163, 100, 104, 47);
+		buttonItems.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				 new itemFrame().setVisible(true);
+			}
+		});
+		buttonItems.setBounds(10, 69, 104, 47);
 		frame.getContentPane().add(buttonItems);
 		
 		Button buttonBills = new Button("Bills");
-		buttonBills.setBounds(320, 100, 104, 47);
+		buttonBills.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				 new billFrame().setVisible(true);
+			}
+		});
+		buttonBills.setBounds(10, 122, 104, 47);
 		frame.getContentPane().add(buttonBills);
 	}
 }

@@ -43,31 +43,32 @@ public class customerFrame extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public void NewWindow(){
+	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
 					customerFrame frame = new customerFrame();
-					frame.setVisible(true);
+					frame.frame.setVisible(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
 		});
-	}
+	};
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
 	public customerFrame() {
-		super();
+		frame = new JFrame();
 		connection = oracleConnection.dbConnector();
-		setBounds(100, 100, 519, 472);
-		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		frame.setBounds(100, 100, 519, 529);
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		
 		contentPane = new JPanel();
 		contentPane.setBackground(SystemColor.controlHighlight);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
+		frame.setContentPane(contentPane);
 		contentPane.setLayout(null);
 		contentPane.addMouseListener(new MouseAdapter() {
 			@Override
