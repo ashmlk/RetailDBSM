@@ -9,7 +9,7 @@ public class oracleConnection {
 	public static Connection dbConnector() {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			Connection con = DriverManager.getConnection( "jdbc:oracle:thin:@oracle.scs.ryerson.ca:1521:orcl","h2kazi","11295798");
+			Connection con = DriverManager.getConnection( "jdbc:oracle:thin:url:1521:orcl","user","password");
 			return con;
 		}catch(Exception e) {
 			JOptionPane.showMessageDialog(null, "Please check your connection and try again");
