@@ -14,4 +14,3 @@ A Front end Java GUI using Swing framework database manager by using Oracle SQL 
 5. Purchases of every customer
 6. View Available stores
 
-*Please note for privacy issues the user and password for establishing connection has been removed.
